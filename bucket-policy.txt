@@ -1,0 +1,16 @@
+// Use traversy media channel video of dennis where he tell us how to make public s3 bucket
+# use the given settings for public access
+{
+    "Version": "2008-10-17",
+    "Statement": [
+        {
+            "Sid": "AllowPublicRead",
+            "Effect": "Allow",
+            "Principal": {
+                "AWS": "*"
+            },
+            "Action": "s3:GetObject",
+            "Resource": "arn:aws:s3:::YOUR-BUCKET-NAME/*"
+        }
+    ]
+}
