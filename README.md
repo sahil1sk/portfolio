@@ -14,7 +14,7 @@ Simple and Fast to access Portfolio site, What is different 🤔 from others ? I
 
 
 ## LIVE URL'S 
-> Frontend WEBSITE LIVE => 'comming soon'
+> Frontend WEBSITE LIVE => 'https://portfolio-sahil1sk.vercel.app'
 
 <br>
 
@@ -36,7 +36,7 @@ Simple and Fast to access Portfolio site, What is different 🤔 from others ? I
 ![](images/portfolio/d_version.png)
 
 * Mobile Version
-![](images/portfolio/d_version.png)
+![](images/portfolio/mobile.png)
 
 * My Work
 ![](images/portfolio/work.png)
