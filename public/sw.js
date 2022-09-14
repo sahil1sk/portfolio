@@ -19,7 +19,8 @@ const assets = [
     '/images/quick_meet.png',
     '/images/spring.png',
     '/images/git_logo.png',
-
+    '/pdf/resume.pdf',
+    
     '/default.css',
     '/blue.css',
     '/green.css',
