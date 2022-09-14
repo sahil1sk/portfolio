@@ -22,7 +22,8 @@ const { heading, imgPath, details=themes } = Astro.props as IntroProps;
         <div class="container pt-3" id="click-box">
             <div class="row main-intro">
                 <div
-                    class="col-12 col-md-6 profile-box ac"    
+                    class="col-12 col-md-6 profile-box"
+                    style="text-align: center;"    
                 >
                     <img id="profile_pic" src={imgPath} />
                 </div>
@@ -58,9 +59,3 @@ const { heading, imgPath, details=themes } = Astro.props as IntroProps;
 
     <About />
 </div>
-
-<style>
-    .ac{
-        text-align: center;
-    }
-</style>
