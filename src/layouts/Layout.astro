@@ -1,0 +1,71 @@
+---
+import '../styles/global.css';
+
+export interface Props {
+  title?: string;
+}
+
+const { title = 'Sahil\'s Portfolio' } = Astro.props as Props;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>{title}</title>
+
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="description"
+		content="This course deals with all things server-side. We base the entire course around the NodeJS platform. We start with a brief overview of the Web protocols: HTTP and HTTPS. We examine NodeJS and NodeJS modules: Express for building web servers.">
+
+	<meta name="keywords" content="sahil-profile, sahils-portfolio, sahil-live, sahil-profile">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<link rel="icon" href="images/user.png" />
+
+	<!--Linking with manifest file-->
+	<link rel="manifest" href="manifest.json">
+	<!--Adding icon for apple and it's status bar color-->
+	<link rel="apple-touch-icon" href="images/icons/icon96.png">
+	<meta name="apple-mobile-web-app-status-bar" content="162225">
+	<!--adding theme color-->
+	<meta name="theme-color" content="#162225">
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+		integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	<link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
+
+	<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&family=Russo+One&display=swap"
+		rel="stylesheet">
+
+	<link rel="stylesheet" type="text/css" href="default.css">
+	<link id="theme-style" rel="stylesheet" type="text/css" href="">
+</head>
+  <body>
+    <slot />
+      
+    <!--There we make button which will help to going to the top-->
+    <a id="setDeco" href="#intro">
+      <div><span id="goTop"><span class="fa fa-chevron-up" style="align-self: center; color: white;"></span></span>
+      </div>
+    </a>
+      
+    <!--for registering service worker-->
+    <script type="text/javascript" src="app.js"></script>
+    <!--this is for smooth scrolling-->
+    <script type="text/javascript" src="bootstrapJS/scroller.js"></script>
+
+    <!--for bootstrapJs-->
+    <script type="text/javascript" src="bootstrapJS/min.js"></script>
+    <script type="text/javascript" src="bootstrapJS/bundleMin.js"></script>
+
+
+    <!--our script-->
+    <script type="text/javascript" src="script.js"></script>
+  </body>
+</html>

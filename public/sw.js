@@ -29,12 +29,12 @@ const assets = [
     '/script.js',
     '/bootstrapJS/min.js',
     '/bootstrapJS/bundleMin.js',
+    '/bootstrapJS/scroller.js',
 
     'https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css',
     'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css',
     'https://fonts.googleapis.com/css2?family=Russo+One&display=swap',
     'https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&family=Russo+One&display=swap',
-    'https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@15/dist/smooth-scroll.polyfills.min.js'
 ]
 
 // install process // Install all the cache data which is required
@@ -49,7 +49,7 @@ self.addEventListener('install', e => {
 
 // activate process
 self.addEventListener('activate',e => {
-    console.log('sw is activated');
+    // console.log('sw is activated');
 })
 
 self.addEventListener('fetch', e => {

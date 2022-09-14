@@ -1,0 +1,63 @@
+---
+
+export interface HeaderProps {
+  logoLink?: string,
+  logoImg?: string,
+  details?: []
+}
+
+let headerDetails = [
+	{
+		'title': 'Work',
+		'link': '#work'
+	},
+    {
+		'title': 'Skills',
+		'link': '#skills'
+	},
+    {
+		'title': 'Resume',
+		'link': '/pdf/resume.pdf',
+        'target': '_blank',
+	},
+    {
+		'title': 'Contact',
+		'link': '#contact'
+	},
+]
+
+const { logoLink="https://github.com/sahil1sk/portfolio", logoImg="/images/git_logo.png", details=headerDetails } = Astro.props as HeaderProps;
+---
+
+<div class="header">
+    <div class="dots-wrapper">
+        <a href={logoLink} target="_blank">
+            <img
+                src={logoImg}
+                alt="git"
+                class="link-box"
+            />
+        </a>
+    </div>
+
+    <div class="d-sm-block d-md-none" style="position: relative;">
+        <i id="action_menu_btn" class="fa fa-ellipsis-v fa-2x"></i>
+        <div class="action_menu" style="display: none;">
+            <ul>
+              {details.map(o => (
+                  <a id="setDeco" href={o.link} target={o.target && o.target}>
+                    <li>{o.title}</li>
+                </a>
+              ))}
+            </ul>
+        </div>
+    </div>
+
+    <div class="d-none d-md-flex">
+        {details.map(o => (
+            <a id="setDeco" href={o.link} target={o.target && o.target}>
+              <h5 class="m-2">{o.title}</h5>
+          </a>
+        ))}
+    </div>
+</div>

@@ -1,0 +1,45 @@
+---
+export interface AboutProps {
+  heading?: string,
+  subheading?: string,
+  details?: []
+}
+
+let contactDetails = [
+	{
+		'icon': 'fa fa-github',
+		'link': 'https://github.com/sahil1sk'
+	},
+	{
+		'icon': 'fa fa-linkedin',
+		'link': 'https://www.linkedin.com/in/sahil-khanna-03091219a'
+	},
+	{
+		'icon': 'fa fa-firefox',
+		'link': 'https://twitter.com/Sahilkhanna07'
+	}
+]
+
+let subHeading = `I'm Full Stack Developer, Working in development field from last
+                +2 Years as a Student. The biggest competition is myself. I am
+                not looking to follow others or pull them down, I'm planning to
+                test my own boundaries.`;
+
+const { heading = "About Me", subheading=subHeading, details=contactDetails } = Astro.props as AboutProps;
+
+---
+    <div class="s1">
+        <div class="container pt-3 pb-3 about-section">
+            <h2 class="text-center p-2 heading">{heading}</h2>
+            <p class="text-center about-desc">{subheading}</p>
+            <div class="d-flex justify-content-center text-center">
+                {
+                    details.map(o => (
+                        <a href={o.link} target="_blank">
+                            <div class="link-box"><i class={o.icon}></i></div>
+                        </a>
+                    ))
+                }
+            </div>
+        </div>
+    </div>

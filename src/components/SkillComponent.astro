@@ -1,0 +1,54 @@
+---
+export interface SkillComponentProps {
+	heading: string;
+	details?: [];
+}
+
+let skillDetails = [
+	{
+		title: "Angular",
+		path: "images/angular.png",
+	},
+	{
+		title: "Spring Boot",
+		path: "images/spring.png",
+	},
+	{
+		title: "Flutter",
+		path: "images/flutter.png",
+	},
+	{
+		title: "HTML/CSS",
+		path: "images/html_css.png",
+	},
+	{
+		title: "AWS",
+		path: "images/aws.png",
+	},
+];
+
+const { heading, details = skillDetails } = Astro.props as SkillComponentProps;
+---
+
+<div id="skills" class="s1 pt-3 pb-3 h-half">
+	<div class="container">
+		<h3 class="text-center p-3 heading">{heading}</h3>
+
+		<div class="row justify-content-center">
+			{
+				details.map((obj) => (
+					<div class="col-5 col-md-2 skill-card">
+						<div class="text-center">
+							<img
+								src={obj.path}
+								class="skill-card-img"
+								alt={obj.title}
+							/>
+							<h5 class="pt-2">{obj.title}</h5>
+						</div>
+					</div>
+				))
+			}
+		</div>
+	</div>
+</div>

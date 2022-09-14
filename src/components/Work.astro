@@ -1,0 +1,90 @@
+---
+export interface WorkProps {
+    heading: string;
+    details?: [];
+}
+
+let workDetails = [
+    {
+        imgPath: "images/quick_meet.png",
+        projTitle: "Quick Meet",
+        techUsed: "Angular & Spring",
+        gitCode: "https://github.com/sahil1sk/dennis_hacthon_project",
+        liveLink: "https://quickmeet.netlify.app",
+    },
+    {
+        imgPath: "images/bluetooth.png",
+        projTitle: "BLE Connector",
+        techUsed: "Flutter SDK",
+        gitCode: "https://github.com/sahil1sk/ble_connector",
+        liveLink: null,
+    },
+    {
+        imgPath: "images/netlify_functions.png",
+        projTitle: "Netlify Functions",
+        techUsed: "Angular & Netlify",
+        gitCode: "https://github.com/sahil1sk/netlify-functions",
+        liveLink: "https://netlify-thinks-sahil1sk-is-great.netlify.app",
+    },
+    {
+        imgPath: "images/auth_server.png",
+        projTitle: "AR Server",
+        techUsed: "Spring Boot",
+        gitCode: "https://github.com/sahil1sk/auth_resource_server",
+        liveLink: null,
+    },
+    {
+        imgPath: "images/google.png",
+        projTitle: "Search Engine",
+        techUsed: "College Project",
+        gitCode: null,
+        liveLink: "https://id-application-1.web.app",
+    },
+];
+
+const { heading, details = workDetails } = Astro.props as WorkProps;
+---
+
+<div class="s2 pt-3 pb-3 h-full" id="work">
+    <h3 class="text-center p-3 heading">{heading}</h3>
+    <div class="container">
+        <div class="row justify-content-center m-1">
+            {
+                details.map((obj) => (
+                    <div class="col-12 col-md-3 abt-card">
+                        <div class="abt-abs">
+                            <img
+                                src={obj.imgPath}
+                                class="abt-abs-img"
+                                alt={obj.projTitle}
+                            />
+                        </div>
+                        <div class="abt-abs-bt">
+                            <div class="text-center">
+                                <h5>{obj.projTitle}</h5>
+                                <p>{obj.techUsed}</p>
+                                <div class="d-flex justify-content-center">
+                                    {obj.gitCode && (
+                                        <a href={obj.gitCode} target="_blank">
+                                            <div class="link-box">
+                                                <i class="fa fa-code" />
+                                            </div>
+                                        </a>
+                                    )}
+
+                                    {obj.liveLink && (
+                                        <a href={obj.liveLink} target="_blank">
+                                            <div class="link-box">
+                                                <i class="fa fa-link" />
+                                            </div>
+                                        </a>
+                                    )}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                ))
+            }
+        </div>
+    </div>
+</div>

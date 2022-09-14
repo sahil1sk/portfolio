@@ -1,0 +1,66 @@
+---
+import About from "./About.astro";
+import Header from "./Header.astro";
+
+
+export interface IntroProps {
+  heading: string,
+  imgPath: string,
+  details?: []
+}
+
+let themes = ['light', 'blue', 'green', 'purple'];
+
+const { heading, imgPath, details=themes } = Astro.props as IntroProps;
+
+---
+
+<div class="main-box">
+    <div id="intro" class="s1">
+        <Header />
+
+        <div class="container pt-3" id="click-box">
+            <div class="row main-intro">
+                <div
+                    class="col-12 col-md-6 profile-box ac"    
+                >
+                    <img id="profile_pic" src={imgPath} />
+                </div>
+                <div class="col-12 col-md-6 intro-heading">
+                    <div>
+                        <h1 class="heading ch">
+                            {heading}
+                            <br />
+                            <span class="d-none d-md-flex"
+                                >Full Stack Developer</span
+                            >
+                            <span class="d-sm-block d-md-none"
+                                >Full-Stack Dev</span
+                            >
+                        </h1>
+                        <div class="colors-div">
+                            {details.map(theme => (
+                                <div
+                                    data-mode={theme}
+                                    id={theme + '-mode'}
+                                    class="theme-dot"
+                                >
+                                </div>
+                            ))}
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+
+    <About />
+</div>
+
+<style>
+    .ac{
+        text-align: center;
+    }
+</style>

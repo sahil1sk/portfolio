@@ -1,0 +1,14 @@
+---
+import Contact from '../components/Contact.astro';
+import Intro from '../components/intro.astro';
+import SkillComponent from '../components/SkillComponent.astro';
+import Work from '../components/Work.astro';
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout>
+	<Intro heading="My name is Sahil" imgPath="images/user.png" />
+	<Work heading="My Recent Work" />
+	<SkillComponent heading="My Skills" />
+	<Contact  heading="Contact Me" subheading="Questions not answered yet? I'm here to answer."/>
+</Layout>

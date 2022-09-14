@@ -1,0 +1,56 @@
+---
+export interface ContactProps {
+  heading: string,
+  subheading: string,
+  details?: string[]
+}
+
+let defaultDetails = [
+	{
+		'icon': 'fa fa-phone',
+		'data': '+91 9999999999'
+	},
+	{
+		'icon': 'fa fa-paper-plane',
+		'data': 'faker@gmail.com'
+	},
+	{
+		'icon': 'fa fa-firefox',
+		'data': 'contact.me'
+	}
+]
+
+const { heading, subheading, details=defaultDetails } = Astro.props as ContactProps;
+---
+
+	<div class="s2">
+		<div class="contact" id="contact">
+			<div class="container text-center">
+				<h6 class="lh">{heading}</h6>
+				<h6 class="text-center sh">{subheading}</h6>
+
+				<div class="row">
+					{details.map(obj => (
+						<div class="col-md-4">
+							<i class={obj.icon}></i>
+							<h6>{obj.data}</h6>
+						</div>
+					))}
+				</div>
+			</div>
+
+			<div class="footer text-center">
+				<h6 style="font-size: 18px;">Copyright {new Date().getFullYear()} All rights reserved</h6>
+			</div>
+
+		</div>
+	</div>
+
+	<style>
+		.lh {
+			font-size: 35px;
+		}
+		.sh {
+			font-size: 25px;
+		}
+	</style>
