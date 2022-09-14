@@ -1,8 +1,7 @@
 ## [This Whole Project is for Dennis September Hackthon](https://www.youtube.com/watch?v=_JQPm0QwFbM)
 
-Thanks to Dennis 
-
-Simple and Fast to access Portfolio site, What is different 🤔 from others ? It will work offline once you got there next time no internet needed, it will work offline and also just by one click convert whole website into Desktop or Mobile App, Fully Responsive Portfolio. 
+(Astro Portfolio)<br>
+Simple and Fast to access Portfolio Site, What is different 🤔 from others ? It will work offline once you got there next time no internet needed, it will work offline and also just by one click convert whole website into Desktop or Mobile App, Fully Responsive Portfolio. 
 
 
 ## Features:
@@ -19,30 +18,31 @@ Simple and Fast to access Portfolio site, What is different 🤔 from others ? I
 <br>
 
 ## Tech Used
-> 1 HTML, CSS, BootStrap and Javascript <br>
-> 2 Added Service Workers to make it work offline
+> 1 Astro <br>
+> 2 HTML, CSS, BootStrap and Javascript <br>
+> 3 Added Service Workers to make it work offline
 
 <br>
 
 ## Demo Images 
 
 * Home Page <br>
-![](images/portfolio/home.png)
+![](public/images/portfolio/home.png)
 
 * Different Themes
-![](images/portfolio/themes.png)
+![](public/images/portfolio/themes.png)
 
 * Desktop Version <br>
-![](images/portfolio/d_version.png)
+![](public/images/portfolio/d_version.png)
 
 * Mobile Version
-![](images/portfolio/mobile.png)
+![](public/images/portfolio/mobile.png)
 
 * My Work
-![](images/portfolio/work.png)
+![](public/images/portfolio/work.png)
 
 * Skills
-![](images/portfolio/skills.png)
+![](public/images/portfolio/skills.png)
 
 * Contact Images
-![](images/portfolio/contact.png)
+![](public/images/portfolio/contact.png)
