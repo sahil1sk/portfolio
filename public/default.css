@@ -222,11 +222,11 @@ a:hover {
 }
 
 #green-mode{
-	background-color: #78866b;
+	background-color: #035B62;
 }
 
 #purple-mode{
-	background-color: #7E4C74;
+	background-color: #8D5552;
 }
 
 #theme-options-wrapper{
@@ -382,11 +382,6 @@ a:hover {
 		font-size: 22px;
 	}
 
-}
-
-#basics{
-	text-align: center;
-	background-color: var(--previewShadow);	
 }
 
 #setCard{

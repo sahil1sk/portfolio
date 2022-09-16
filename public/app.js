@@ -6,3 +6,4 @@ if('serviceWorker' in navigator) {
     })
     .catch(err => console.log('sw register err ', err))
 }
+
