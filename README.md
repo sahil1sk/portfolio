@@ -1,5 +1,3 @@
-## [This Whole Project is for Dennis September Hackthon](https://www.youtube.com/watch?v=_JQPm0QwFbM)
-
 (Astro Portfolio)<br>
 Simple and Fast to access Portfolio Site, What is different 🤔 from others ? It will work offline once you got there next time no internet needed, it will work offline and also just by one click convert whole website into Desktop or Mobile App, Fully Responsive Portfolio. 
 
