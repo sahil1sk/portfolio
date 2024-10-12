@@ -1,4 +1,4 @@
-const staticCache = 'cache'; // just giving the name to static file to use it as static data
+const staticCache = 'updatedCache'; // just giving the name to static file to use it as static data
 
 const assets = [
     '/',
